@@ -33,6 +33,7 @@ button {
   --text-primary: #3a3a3a;
   --text-secondary: #e02c6d;
   --bg-black: #000000;
+  --bg-dark: #0a0826;
 }
 
 /* Globals[START] */
@@ -84,6 +85,7 @@ button {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 8%;
   row-gap: 50px;
 }
 
@@ -101,6 +103,9 @@ button {
 /* Colors */
 .bg-black {
   background-color: var(--bg-black);
+}
+.bg-dark {
+  background-color: var(--bg-dark);
 }
 
 /* Height/ Width */
@@ -140,6 +145,9 @@ button {
 .mt-16 {
   margin-top: 16px;
 }
+.mb-50 {
+  margin-bottom: 50px;
+}
 
 .py-30 {
   padding-top: 30px;
@@ -148,6 +156,9 @@ button {
 
 .pt-30 {
   padding-top: 30px;
+}
+.pb-50 {
+  padding-bottom: 50px;
 }
 
 /* Button */
@@ -188,6 +199,12 @@ button {
 /* Header */
 
 /* Nav */
+.hamburger-menu {
+  display: none;
+}
+.mobile-cart {
+  display: none;
+}
 #brand {
   font-size: 1.5em;
   font-weight: 700;
@@ -257,18 +274,19 @@ hr:after {
     rgba(255, 255, 255, 0.329) 100%
   );
 }
+#associated-companies .flex {
+  flex-flow: row wrap;
+}
 
 /* Collection items */
 .collection-items {
   margin-top: 30px;
 }
-.collection-items .inner-container {
-  display: inline-block;
+.collection-items .item {
   padding: 15px;
   border-radius: 5px;
-  /* border: 1px solid black; */
-  /* box-shadow: 2px 2px 5px 2px rgba(209, 204, 204, 0.116); */
-  box-shadow: 0px 0px 20px 5px rgba(143, 142, 142, 0.2);
+  width: 100%;
+  box-shadow: 0px 0px 10px 2px rgba(182, 181, 181, 0.2);
 }
 
 .collection-items h2,
@@ -308,15 +326,24 @@ hr:after {
   font-weight: 600;
 }
 
-.collection-items .item-image {
+.collection-items .item-image > img {
   width: 100%;
 }
-.see-more {
-  margin-top: 50px;
+
+/* Featured */
+#featured p,
+#featured button {
+  margin-top: 1em;
+}
+#featured h2 {
+  font-size: 2.2em;
+}
+#featured {
+  gap: 100px;
 }
 
 /* Testimonial */
-.testimonial-container {
+#testimonial-container {
   margin-top: 30px;
 }
 .testimonial {
@@ -345,11 +372,7 @@ hr:after {
   font-size: 1.8em;
 }
 
-#featured p,
-#featured button {
-  margin-top: 1em;
-}
-
+/* Footer */
 footer {
   color: white;
   padding: 50px;
@@ -362,6 +385,7 @@ footer h3 {
 footer p {
   color: #d9dbe1;
   font-size: 0.9em;
+  padding-top: 4px;
 }
 
 footer .social {
@@ -375,4 +399,127 @@ footer .social img {
 
 footer .social img:hover {
   opacity: 0.7;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 2000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  #featured h2 {
+    font-size: 1.5em;
+  }
+  #featured p {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  /* Associated Companies */
+  #associated-companies {
+    max-width: 90%;
+  }
+
+  /* Popular Collections */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  /* Featured */
+  #featured {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Testimonials */
+  #testimonial-container {
+    flex-direction: column;
+    max-width: max(500px, 60%);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  /* Header */
+  .menu-items {
+    display: none;
+  }
+  #navbar {
+    justify-content: space-between;
+  }
+  #brand {
+    margin: 0 auto;
+    font-size: 1em;
+  }
+  .hamburger-menu {
+    display: inline;
+    font-size: 1em;
+  }
+  .mobile-cart {
+    display: inline;
+    color: black;
+    font-size: 1em;
+  }
+
+  #start-journey.flex {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  #start-journey .flex-item {
+    text-align: center;
+  }
+
+  #start-journey .flex-item h1 {
+    font-size: 1.8em;
+  }
+  .header-image {
+    width: 60%;
+  }
+
+  /* Associated Companies */
+  #associated-companies .flex {
+    gap: 20px;
+  }
+
+  /* Collections */
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0;
+  }
+  .collection-items {
+    width: 100%;
+  }
+  .collection-items .item {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+  /* Featured */
+  #featured img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  /* Associated Companies */
+  #associated-companies .flex {
+    flex-direction: column;
+  }
+
+  /* Featured */
+  #featured img {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  #footer h3 {
+    font-size: 1em;
+  }
+  #footer p {
+    font-size: 0.7em;
+  }
 }
