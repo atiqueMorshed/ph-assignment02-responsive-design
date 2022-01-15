@@ -63,14 +63,17 @@ button {
   height: 100vh;
 }
 
-.w-90 {
+.max-w-90 {
   max-width: 90%;
 }
-.w-85 {
+.max-w-85 {
   max-width: 85%;
 }
-.w-80 {
+.max-w-80 {
   max-width: 80%;
+}
+.max-w-70 {
+  max-width: 70%;
 }
 
 /* Margin/ Padding */
@@ -90,6 +93,11 @@ button {
   margin-top: 16px;
 }
 
+.py-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .pt-30 {
   padding-top: 30px;
 }
@@ -99,6 +107,7 @@ button {
   padding: 13px 25px;
   border: none;
   border-radius: 30px;
+  box-shadow: 0px 3px 5px 1px rgba(27, 27, 27, 0.3);
 }
 .btn i {
   padding: 0 10px;
@@ -126,8 +135,6 @@ button {
 /* Specific styles */
 
 /* Header */
-.header-container {
-}
 
 /* Nav */
 #brand {
@@ -174,4 +181,28 @@ button {
 }
 #start-journey h1 {
   animation: animate-text 1s ease-in-out;
+}
+
+/* Associated Companies */
+
+hr {
+  height: 1px;
+  margin: 28px 0;
+  background: linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    #e0e5eb,
+    rgba(0, 0, 0, 0)
+  );
+  border: 0;
+}
+hr:after {
+  display: block;
+  content: '';
+  height: 28px;
+  background-image: radial-gradient(
+    farthest-side at center top,
+    #dce0e6 30%,
+    rgba(255, 255, 255, 0.329) 100%
+  );
 }
