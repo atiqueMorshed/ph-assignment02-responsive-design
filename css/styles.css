@@ -247,8 +247,17 @@ button {
     margin-left: 0;
   }
 }
+
 #start-journey h1 {
-  animation: animate-text 1s ease-in-out;
+  animation: animate-text 1.5s ease-in-out;
+}
+#start-journey p,
+#start-journey .btn {
+  opacity: 0;
+}
+#start-journey p,
+#start-journey .btn {
+  animation: animate-text 1s ease-in-out 1s forwards;
 }
 
 /* Associated Companies */
