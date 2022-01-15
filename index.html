@@ -5,7 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Design - pha2</title>
+    <script
+      src="https://kit.fontawesome.com/31dda91769.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://unpkg.com/akar-icons-fonts"></script> -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header-container text-primary w-85 m-auto mt-90">
+      <nav id="navbar" class="flex justify-between items-center text-primary">
+        <div id="brand" class="text-primary">Influencer products</div>
+        <div class="menu">
+          <ul class="flex justify-center align-center">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Log in</a></li>
+            <li>
+              <a href="#">
+                <!-- Search Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ai ai-Search"
+                >
+                  <path
+                    d="M21 21l-4.486-4.494M19 10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <!-- Cart Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ai ai-Cart"
+                >
+                  <path
+                    d="M5 7h13.79a2 2 0 0 1 1.99 2.199l-.6 6A2 2 0 0 1 18.19 17H8.64a2 2 0 0 1-1.962-1.608L5 7z"
+                  />
+                  <path d="M5 7l-.81-3.243A1 1 0 0 0 3.22 3H2" />
+                  <path d="M8 21h2" />
+                  <path d="M16 21h2" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section
+        id="start-journey"
+        class="flex justify-between items-center mt-90"
+      >
+        <div class="flex-item">
+          <h1>Start your Journey as Influencer</h1>
+          <p class="mt-16">
+            Get all the influencer products at one place. Click on the button
+            below to get started with our starter kits.
+          </p>
+          <button class="btn btn-primary btn-icon-animation mt-20">
+            Prebook now <i class="fas fa-arrow-right btn-icon"></i>
+          </button>
+        </div>
+        <div class="flex-item">
+          <img class="header-image" src="images/main-camera.png" alt="Camera" />
+        </div>
+      </section>
+    </header>
+  </body>
 </html>
