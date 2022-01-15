@@ -32,6 +32,7 @@ button {
 :root {
   --text-primary: #3a3a3a;
   --text-secondary: #e02c6d;
+  --bg-black: #000000;
 }
 
 /* Globals[START] */
@@ -54,6 +55,9 @@ button {
 .flex-item {
   /* flex: 1; */
 }
+.flex-1 {
+  flex: 1;
+}
 .items-center {
   align-items: center;
 }
@@ -68,6 +72,12 @@ button {
 }
 .gap-50 {
   gap: 50px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.gap-3 {
+  gap: 3px;
 }
 
 /* Grid */
@@ -86,6 +96,11 @@ button {
 }
 .text-center {
   text-align: center;
+}
+
+/* Colors */
+.bg-black {
+  background-color: var(--bg-black);
 }
 
 /* Height/ Width */
@@ -139,8 +154,11 @@ button {
 .btn {
   padding: 13px 25px;
   border: none;
-  border-radius: 30px;
+
   box-shadow: 0px 3px 5px 1px rgba(27, 27, 27, 0.3);
+}
+.btn-radius-30 {
+  border-radius: 30px;
 }
 .btn i {
   padding: 0 10px;
@@ -325,4 +343,36 @@ hr:after {
 .testimonial p::after {
   content: "''";
   font-size: 1.8em;
+}
+
+#featured p,
+#featured button {
+  margin-top: 1em;
+}
+
+footer {
+  color: white;
+  padding: 50px;
+}
+
+footer h3 {
+  font-size: 1.5em;
+}
+
+footer p {
+  color: #d9dbe1;
+  font-size: 0.9em;
+}
+
+footer .social {
+  padding-top: 17px;
+  cursor: pointer;
+}
+
+footer .social img {
+  padding: 8px;
+}
+
+footer .social img:hover {
+  opacity: 0.7;
 }
